@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>:trol:</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>:trol:</h1>
+
+        <div class="field">
+            <label for="masterToken">Master Token</label>
+            <input id="masterToken" type="text" autocomplete="off" />
+        </div>
+
+        <div class="field">
+            <label for="userToken">User Token</label>
+            <input id="userToken" type="text" autocomplete="off" />
+        </div>
+
+        <div class="buttons-row">
+            <button id="btnGenerateToken">Generate Token</button>
+            <button id="btnDeleteToken">Delete Token</button>
+            <button id="btnViewLogs">View Logs</button>
+        </div>
+
+        <div class="field">
+            <label for="fname">First Name</label>
+            <input id="fname" type="text" autocomplete="off" />
+        </div>
+
+        <div class="field">
+            <label for="lname">Last Name</label>
+            <input id="lname" type="text" autocomplete="off" />
+        </div>
+
+        <div class="field">
+            <label for="siteUrl">Site URL</label>
+            <input id="siteUrl" type="text" autocomplete="off" />
+        </div>
+
+        <div class="field">
+            <label for="keyword">Keyword</label>
+            <input id="keyword" type="text" autocomplete="off" />
+        </div>
+
+        <div class="field">
+            <label for="repeat">Repeat</label>
+            <input id="repeat" type="number" min="1" value="1" />
+        </div>
+
+        <div class="buttons-row" style="width: 100%; justify-content: center;">
+            <button id="btnSendSite">Send Site</button>
+            <button id="btnSendKeyword">Send Keyword</button>
+        </div>
+
+        <pre id="output"></pre>
+    </div>
+
+    <script type="module" src="./app.js"></script>
+</body>
+
+</html>
