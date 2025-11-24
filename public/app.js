@@ -26,10 +26,6 @@ async function main() {
         });
     });
 
-    const createEmail = (fn, ln) => {
-        return `${fn}.${ln}@${domain}`;
-    }
-
     const getIP = async () => (await fetch("/ip")).json();
 
     const headers = () => ({
@@ -104,7 +100,7 @@ async function main() {
     document.getElementById("btnSendSite").onclick = async () => {
         try {
             const { ip } = await getIP();
-            const email = createEmail(getInput("fname"), getInput("lname"));
+            const email = getInput("email");
             const repeat = Number(getInput("repeat"));
 
             for (let i = 0; i < repeat; i++) {
@@ -125,7 +121,7 @@ async function main() {
     document.getElementById("btnSendKeyword").onclick = async () => {
         try {
             const { ip } = await getIP();
-            const email = createEmail(getInput("fname"), getInput("lname"));
+            const email = getInput("email");
             const repeat = Number(getInput("repeat"));
 
             for (let i = 0; i < repeat; i++) {
